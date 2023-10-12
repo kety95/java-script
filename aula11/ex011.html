@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naturalidade</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Naturalidade</h1>
+    <form action="" method="post" autocomplete="on">
+        <label for="nat">Você é natural de onde?</label>  
+        <input type="text" name="nat" id="nat" list="lpais">
+        <datalist id="lpais">
+            <option value="Argentina">Argentina</option>
+            <option value="Brasil">Brasil</option>
+            <option value="Canadá">Canadá</option>
+            <option value="Dinamarca">Dinamarca</option>
+            <option value="Egito">Egito</option>
+            <option value="França">França</option>
+            <option value="México">México</option>
+            <option value="Reino Unido">Reino Unido</option>
+            <option value="Suíça">Suíça</option>
+            <option value="Yemen">Yemen</option>
+            <option value="Zâmbia">Zâmbia</option>
+        </datalist>
+        <input type="button" value="Verificar" onclick="vernaturalidade()">
+        <input type="reset" value="Limpar">
+    </form>
+    <div id="res"></div>
+
+    <script>
+        function vernaturalidade(){
+            var naturalidade = window.document.querySelector('input#nat')
+            if (naturalidade.value == 'Brasil') {
+                res.innerHTML = '<p>Você é brasileiro!</p>'
+            }else{
+                res.innerHTML = '<p>Você é estrangeiro!</p>'
+            }
+            res.innerHTML += `<p>Isso porque você nasceu no país: <strong>${naturalidade.value}</strong></p>`
+        }
+    </script>
+</body>
+</html>
