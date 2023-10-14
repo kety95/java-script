@@ -1,4 +1,4 @@
-/* outro projeto */
+@charset "UTF-8";
 body{
     background:#64C6DE;
     font: normal 15pt Arial;
@@ -20,14 +20,18 @@ section{
 }
 
 div {
-    text-align: center;
     padding: 40px;
 }
 
-div > img{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+div#num {
+    font-size: small;
+}
+
+label{
+    display: block;
+}
+input{
+    
 }
 
 footer{
